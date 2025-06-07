@@ -20,7 +20,7 @@ const ManagePostings = () => {
                         fontWeight: 600
                     }}
                 >
-                    Upcoming Interviews
+                    Manage Postings
                 </Typography>
                 <MuiLink
                     component={Link}

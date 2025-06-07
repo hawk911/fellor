@@ -11,12 +11,12 @@ import {
     Link,
 } from '@mui/material';
 import { usePathname } from 'next/navigation';
-import { candidateSidebarItems } from '@/consts/sideBarElems';
+import { recruiterSideBarItems } from '@/consts/sideBarElems';
 
 const Header = () => {
     const theme = useTheme();
     const pathname = usePathname();
-
+    console.log('pathname:',pathname);
     const [quickAnchorEl, setQuickAnchorEl] = useState<null | HTMLElement>(null);
     const quickOpen = Boolean(quickAnchorEl);
     const handleQuickClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -37,7 +37,7 @@ const Header = () => {
     };
 
     const getActiveLabel = () => {
-        for (const item of candidateSidebarItems) {
+        for (const item of recruiterSideBarItems) {
             if (item.href === pathname) return item.label;
             if (item.children) {
                 const subItem = item.children.find((child) => child.href === pathname);
