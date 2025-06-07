@@ -217,7 +217,7 @@ const HiringInsights = () => {
                             dataKey="interviewRate"
                             stroke="#22C55E"
                             strokeWidth={2}
-                            dot={{ r: 3 }}
+                            dot={false}
                             activeDot={{ r: 5 }}
                             name="Application to Interview Rate"
                         />
@@ -226,7 +226,7 @@ const HiringInsights = () => {
                             dataKey="acceptanceRate"
                             stroke="#6F3FF1"
                             strokeWidth={2}
-                            dot={{ r: 3 }}
+                            dot={false}
                             activeDot={{ r: 5 }}
                             name="Offer Acceptance Rate"
                         />
@@ -235,7 +235,7 @@ const HiringInsights = () => {
                             dataKey="rejectionRate"
                             stroke="#F97316"
                             strokeWidth={2}
-                            dot={{ r: 3 }}
+                            dot={false}
                             activeDot={{ r: 5 }}
                             name="Rejection Rate"
                         />
