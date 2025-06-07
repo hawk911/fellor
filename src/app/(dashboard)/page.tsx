@@ -2,9 +2,9 @@
 import {Box, Grid} from "@mui/material";
 import StatsCardGrid from "../components/StatsCardGrid/StatsCardGrid";
 import UpcomingInterviews from "@/app/components/UpcomingInteriews/UpcomingInterviews";
-import TodoList from "@/app/components/TodoList/TodoList";
-import TopActiveJobs from "@/app/components/TopActiveJobs/TopActiveJobs";
-import HiringInsights from "@/app/components/HiringInsights/HiringInsights";
+import TodoList from "@/app/components/RecruiterComponents/TodoList/TodoList";
+import TopActiveJobs from "@/app/components/RecruiterComponents/TopActiveJobs/TopActiveJobs";
+import HiringInsights from "@/app/components/RecruiterComponents/HiringInsights/HiringInsights";
 
 export default function Home() {
   return (

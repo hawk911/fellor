@@ -52,6 +52,9 @@ const theme = extendTheme({
                 primary: {
                     main: '#F97316',
                 },
+                secondary: {
+                    main: '#FFEDD5',
+                },
                 gray: {
                     200:"#E4E4E5",
                     300: '#D4D7DD',

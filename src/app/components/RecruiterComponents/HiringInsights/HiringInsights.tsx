@@ -1,7 +1,7 @@
 "use client";
 import React, { ReactNode, useState } from "react";
 import {
-    Box,
+    Box, FormControl, InputLabel,
     MenuItem,
     Paper,
     Select,
@@ -21,6 +21,7 @@ import {
 import Image from "next/image";
 import { Props } from "recharts/types/component/DefaultLegendContent";
 import { Assistant } from "next/font/google";
+import StyledSelect from "@/app/components/styled/StyledSelect/StyledSelect";
 
 // Локальное подключение шрифта
 const assistant = Assistant({
@@ -87,17 +88,6 @@ const renderLegend = (props: Props): ReactNode => {
     );
 };
 
-const CustomExpandIcon = () => (
-    <Box sx={{ width: 12, height: 7, display: "flex", alignItems: "center" }}>
-        <Image
-            src="/icons/arrows/greyDownIcon.svg"
-            alt="arrow down"
-            width={12}
-            height={7}
-        />
-    </Box>
-);
-
 const HiringInsights = () => {
     const [timeframe, setTimeframe] = useState<number>(30);
     const [chartData, setChartData] = useState<ChartData[]>(
@@ -135,34 +125,20 @@ const HiringInsights = () => {
                 >
                     Hiring Insights
                 </Typography>
-                <Select
-                    MenuProps={{
-                        disableScrollLock: true,
-                    }}
-                    value={timeframe}
-                    onChange={handleTimeframeChange}
-                    IconComponent={CustomExpandIcon}
-                    sx={{
-                        color: "#6B7280",
-                        fontSize: "14px",
-                        fontFamily: "Inter,serif",
-                        padding: '4px 8px',
-                        '& .MuiSelect-icon': {
-                            top: '50%',
-                            transform: 'translateY(-50%)',
-                            right: 8,
-                            pointerEvents: 'none',
-                        },
-                        '& .MuiSelect-select': {
-                            padding: '4px 0px 4px 4px',
-                            paddingRight:"10px!important"
-                        },
-                    }}
-                >
-                    <MenuItem value={30}>Last 30 days</MenuItem>
-                    <MenuItem value={7}>Last week</MenuItem>
-                    <MenuItem value={1}>Current Day</MenuItem>
-                </Select>
+                <FormControl variant="outlined"
+                             size={"small"} sx={{minWidth:120}}>
+                    <StyledSelect
+                        labelId="type"
+                        value={timeframe}
+                        sx={{color:"#6B7280"}}
+                        onChange={handleTimeframeChange}
+                    >
+                        <MenuItem value={30}>Last 30 days</MenuItem>
+                        <MenuItem value={7}>Last week</MenuItem>
+                        <MenuItem value={1}>Current Day</MenuItem>
+                    </StyledSelect>
+                </FormControl>
+
             </Box>
             <div className={assistant.className}>
                 <ResponsiveContainer width="100%" height={320}>

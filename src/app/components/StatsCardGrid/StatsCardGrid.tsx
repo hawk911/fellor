@@ -34,6 +34,7 @@ const StatsCardGrid = () => {
                 flexWrap: 'wrap',
                 justifyContent: 'space-between',
                 gap: '6px',
+                mb:2,
                 width: '100%',
             }}
         >
