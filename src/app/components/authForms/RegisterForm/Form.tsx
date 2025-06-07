@@ -14,7 +14,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import FormInput from '@/app/components/styled/FormInput/FormInput';
 import CustomCheckbox from '@/app/components/styled/CustomCheckbox/CustomCheckbox';
-import SocialButtons from "@/app/common/SocialButtons/SocialButtons";
+import SocialButtons from "@/app/components/common/SocialButtons/SocialButtons";
 
 const registerSchema = z.object({
     fullName: z.string().min(2, 'Full name is required'),

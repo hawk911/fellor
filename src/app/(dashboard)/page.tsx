@@ -1,5 +1,5 @@
 "use client";
-import {Box, Grid, Paper} from "@mui/material";
+import {Box, Grid} from "@mui/material";
 import StatsCardGrid from "../components/StatsCardGrid/StatsCardGrid";
 import UpcomingInterviews from "@/app/components/UpcomingInteriews/UpcomingInterviews";
 import TodoList from "@/app/components/TodoList/TodoList";

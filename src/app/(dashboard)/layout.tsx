@@ -1,3 +1,4 @@
+"use client";
 import SideBar from '@/app/components/SideBar/SideBar';
 import Header from "@/app/components/Header/Header";
 import Footer from "@/app/components/Footer/Footer";

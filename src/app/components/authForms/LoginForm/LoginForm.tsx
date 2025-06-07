@@ -15,7 +15,7 @@ import Link from "next/link";
 import {SubmitHandler, useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {z} from "zod";
-import SocialButtons from "@/app/common/SocialButtons/SocialButtons";
+import SocialButtons from "@/app/components/common/SocialButtons/SocialButtons";
 import FormInput from "@/app/components/styled/FormInput/FormInput";
 import CustomCheckbox from "@/app/components/styled/CustomCheckbox/CustomCheckbox";
 
