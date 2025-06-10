@@ -61,10 +61,10 @@ const Pagination:React.FC<PaginationProps> = ({page,setPage,pageCount}) => {
                                 color: isCurrent
                                     ? theme.palette.primary.main
                                     : theme.palette.gray?.[500],
-                                bgcolor: isCurrent ? theme.palette.secondary.main : 'transparent',
+                                bgcolor: isCurrent ? theme.palette.primary.light : 'transparent',
                                 borderRadius: 1,
                                 '&:hover': {
-                                    bgcolor: isCurrent ? theme.palette.secondary.main : theme.palette.action.hover,
+                                    bgcolor: isCurrent ? theme.palette.primary.light : theme.palette.action.hover,
                                 },
                             }}
                         >
