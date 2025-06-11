@@ -37,16 +37,22 @@ jobs:
 
       - name: Run ESLint
         env:
+          # This environment variable is used by the SARIF formatter to ignore suppressed errors.
           SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
-        run: npx eslint .
-          --config .eslintrc.js
-          --ext .js,.jsx,.ts,.tsx
-          --format @microsoft/eslint-formatter-sarif
-          --output-file eslint-results.sarif
+        # The command is now a single block. 
+        # The backslashes (\) at the end of each line indicate that the command continues on the next line.
+        run: |
+          npx eslint . \
+            --config .eslintrc.js \
+            --ext .js,.jsx,.ts,.tsx \
+            --format @microsoft/eslint-formatter-sarif \
+            --output-file eslint-results.sarif
         continue-on-error: true
 
       - name: Upload analysis results to GitHub
         uses: github/codeql-action/upload-sarif@v3
         with:
+          # The path to the SARIF file which was generated in the previous step.
           sarif_file: eslint-results.sarif
+          # This is an optional parameter that will cause the Action to wait for the analysis to complete.
           wait-for-processing: true
