@@ -30,24 +30,25 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install ESLint
+      - name: Install dependencies
         run: |
           npm install eslint@8.10.0
           npm install @microsoft/eslint-formatter-sarif@3.1.0
+          # The following packages are required to lint TypeScript files.
+          npm install @typescript-eslint/parser@^5.0.0 @typescript-eslint/eslint-plugin@^5.0.0
 
       - name: Run ESLint
-        env:
-          # This environment variable is used by the SARIF formatter to ignore suppressed errors.
-          SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
-        # The command is now a single block. 
-        # The backslashes (\) at the end of each line indicate that the command continues on the next line.
+        # Note: 'continue-on-error' has been removed. 
+        # This will make the workflow fail on this step if ESLint has a configuration problem,
+        # making it much easier to see the root cause.
+        # Once configuration issues are resolved, you can add 'continue-on-error: true' back
+        # if you want the workflow to proceed even with linting errors (exit code 1).
         run: |
           npx eslint . \
             --config .eslintrc.js \
             --ext .js,.jsx,.ts,.tsx \
             --format @microsoft/eslint-formatter-sarif \
             --output-file eslint-results.sarif
-        continue-on-error: true
 
       - name: Upload analysis results to GitHub
         uses: github/codeql-action/upload-sarif@v3
