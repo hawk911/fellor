@@ -1,7 +1,7 @@
 "use client";
 import {Box, Grid} from "@mui/material";
-import StatsCardGrid from "../components/StatsCardGrid/StatsCardGrid";
-import UpcomingInterviews from "@/app/components/UpcomingInteriews/UpcomingInterviews";
+import StatsCardGrid from "@/app/components/common/StatsCardGrid/StatsCardGrid";
+import UpcomingInterviews from "@/app/components/common/UpcomingInteriews/UpcomingInterviews";
 import TodoList from "@/app/components/RecruiterComponents/TodoList/TodoList";
 import TopActiveJobs from "@/app/components/RecruiterComponents/TopActiveJobs/TopActiveJobs";
 import HiringInsights from "@/app/components/RecruiterComponents/HiringInsights/HiringInsights";

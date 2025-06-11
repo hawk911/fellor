@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import {Select, styled, SelectProps, Box} from "@mui/material";
 
 const CustomSelect = styled(Select)(({ theme }) => ({

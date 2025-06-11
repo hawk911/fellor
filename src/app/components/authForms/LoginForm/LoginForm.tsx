@@ -2,12 +2,9 @@ import React from 'react';
 import {
     Box,
     Button,
-    Checkbox,
     Divider,
     FormControlLabel,
     Link as MuiLink,
-    Stack,
-    TextField,
     Typography,
     useTheme
 } from "@mui/material";

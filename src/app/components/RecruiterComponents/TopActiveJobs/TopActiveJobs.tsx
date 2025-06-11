@@ -1,7 +1,6 @@
 import React from 'react';
-import {Box, LinearProgress, Link as MuiLink, Paper, Typography} from "@mui/material";
-import Link from "next/link";
-
+import {Box, LinearProgress, Paper, Typography} from "@mui/material";
+import CardHeader from "@/app/components/styled/CardHeader/CardHeader";
 const TopActiveJobs = () => {
     const activeBlocks=[{
         title:"Senior developer",
@@ -24,38 +23,7 @@ const TopActiveJobs = () => {
         <Paper className={"inter"} sx={{
             border:"1px solid #EAECF0",p:"24px"
         }}>
-            <Box sx={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                mb: '14px'
-            }}>
-                <Typography
-                    sx={{
-                        fontSize: '20px',
-                        lineHeight: '100%',
-                        letterSpacing: '0%',
-                        fontWeight: 600
-                    }}
-                >
-                    Upcoming Interviews
-                </Typography>
-                <MuiLink
-                    component={Link}
-                    href="#"
-                    sx={{
-                        color: '#727885',
-                        fontWeight: 600,
-                        fontSize: '14px',
-                        lineHeight: '20px',
-                        letterSpacing: '0%',
-                        textDecoration: 'none',
-                        '&:hover': { textDecoration: 'underline' }
-                    }}
-                >
-                    See all
-                </MuiLink>
-            </Box>
+            <CardHeader title={"Top Active Jobs"} href={"#"}   />
             <Box display="flex"
                  flexDirection="column"
                  gap={2}>
@@ -100,7 +68,6 @@ const TopActiveJobs = () => {
                     </Box>
                 </Box>)}
             </Box>
-
         </Paper>
     );
 };

@@ -1,7 +1,6 @@
 import React from 'react';
 import {Box, Typography} from "@mui/material";
-import CoreValueForm
-    from "@/app/components/RecruiterComponents/CreateJobForm/CoreValueKeyWord/CoreValueForm/CoreValueForm";
+import CoreValueForm from "./CoreValueForm/CoreValueForm";
 const CoreValueKeyWords = () => {
     return (
         <div>

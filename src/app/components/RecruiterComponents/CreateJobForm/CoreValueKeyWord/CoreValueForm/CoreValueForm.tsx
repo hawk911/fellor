@@ -14,7 +14,7 @@ const TITLES = [
 ];
 
 type FormValues = {
-    [key: string]: string; // dynamic key names based on title
+    [key: string]: string;
 };
 
 const CoreValueForm = () => {
@@ -22,7 +22,6 @@ const CoreValueForm = () => {
 
     const onSubmit = (data: FormValues) => {
         console.log('Form Values:', data);
-        // handle API call or next step
     };
 
     return (

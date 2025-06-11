@@ -9,16 +9,15 @@ const BannerComponent = () => {
         <Box
             sx={{
                 width: '640px',
-                maxHeight: '890px',
+                height:"85vh",
                 borderRadius: "16px",
                 position: 'relative',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                overflow: 'hidden', // Чтобы overlay не выходил за края
+                overflow: 'hidden',
             }}
         >
-            {/* Фоновое изображение */}
             <Image
                 src={loginBanner}
                 alt="Login banner"
@@ -30,8 +29,6 @@ const BannerComponent = () => {
                 }}
                 priority
             />
-
-            {/* Лёгкий overlay */}
             <Box
                 sx={{
                     position: 'absolute',
@@ -39,12 +36,10 @@ const BannerComponent = () => {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: 'rgba(0, 0, 0, 0.1)', // Прозрачность 10%
-                    zIndex: -1, // между картинкой и контентом
+                    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                    zIndex: -1,
                 }}
             />
-
-            {/* Контент поверх */}
             <Box
                 sx={{
                     pt: "90px",
@@ -81,9 +76,8 @@ const BannerComponent = () => {
                         Its Moment
                     </Typography>
                     <Typography
+                        variant={"body1"}
                         sx={{
-                            fontSize: 16,
-                            fontWeight: 400,
                             color: "#EEEEEE",
                             lineHeight: "22px"
                         }}

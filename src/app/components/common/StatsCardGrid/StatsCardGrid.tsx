@@ -55,7 +55,7 @@ const StatsCardGrid = () => {
                         key={title}
                         sx={{
                             flex: '1 1 calc(25% - 6px)',
-                            minWidth: '240px', // fallback for very small screens
+                            minWidth: '240px',
                             border: '1px solid #F3F4F6',
                             borderRadius: '12px',
                             padding: '25px',

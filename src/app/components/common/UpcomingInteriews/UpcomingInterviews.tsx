@@ -1,7 +1,7 @@
 import React from 'react';
-import { Paper, Typography, Box, Link as MuiLink } from '@mui/material';
-import Link from 'next/link';
+import { Paper, Typography, Box } from '@mui/material';
 import Image from 'next/image';
+import CardHeader from "@/app/components/styled/CardHeader/CardHeader";
 
 interface Interview {
     date: string;
@@ -37,50 +37,8 @@ const UpcomingInterviews = () => {
     ];
 
     return (
-        <Paper
-            className={"inter"}
-            elevation={0}
-            sx={{
-                p: '24px',
-                border: '1px solid #EAECF0',
-                borderRadius: '8px'
-            }}
-        >
-            {/* Header */}
-            <Box sx={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                mb: '14px'
-            }}>
-                <Typography
-                    sx={{
-                        fontSize: '20px',
-                        lineHeight: '100%',
-                        letterSpacing: '0%',
-                        fontWeight: 600
-                    }}
-                >
-                    Upcoming Interviews
-                </Typography>
-                <MuiLink
-                    component={Link}
-                    href="#"
-                    sx={{
-                        color: '#727885',
-                        fontWeight: 600,
-                        fontSize: '14px',
-                        lineHeight: '20px',
-                        letterSpacing: '0%',
-                        textDecoration: 'none',
-                        '&:hover': { textDecoration: 'underline' }
-                    }}
-                >
-                    See all
-                </MuiLink>
-            </Box>
-
-            {/* Interview Blocks */}
+        <Paper>
+            <CardHeader title={"Upcoming Interviews"} href={"#"} />
             {interviews.map((interview, index) => (
                 <Box key={`${interview.name}-${index}`} sx={{ mb: '10px' }}>
                     <Box sx={{
@@ -91,11 +49,10 @@ const UpcomingInterviews = () => {
                         alignItems: 'center'
                     }}>
                         <Typography
+                            variant={"body2"}
                             sx={{
-                                fontWeight: 400,
-                                fontSize: '14px',
                                 lineHeight: '100%',
-                                letterSpacing: '0%',
+                                letterSpacing: '',
                                 color: '#000',
                                 mb: '8px'
                             }}
@@ -104,10 +61,9 @@ const UpcomingInterviews = () => {
                         </Typography>
                         <Box sx={{ flexGrow: 1 }}>
                             <Typography
+                                variant={"body1"}
                                 sx={{
                                     fontFamily: 'ZangeziSans09, sans-serif',
-                                    fontWeight: 400,
-                                    fontSize: '16px',
                                     lineHeight: '100%',
                                     letterSpacing: '0%',
                                     mb: '15px'
@@ -127,10 +83,9 @@ const UpcomingInterviews = () => {
                                     height={16}
                                 />
                                 <Typography
+                                    variant={"body2"}
                                     sx={{
-                                        fontWeight: 400,
-                                        fontSize: '14px',
-                                        lineHeight: '14px',
+                                        lineHeight: '100%',
                                         letterSpacing: '0%',
                                         color: '#000000'
                                     }}

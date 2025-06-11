@@ -3,15 +3,13 @@ import Image from "next/image"
 import {
     Box,
     Button,
-    Card,
     FormControlLabel,
     FormLabel,
     Grid,
-    MenuItem,
+    MenuItem, Paper,
     Radio,
     RadioGroup,
     Typography,
-    useTheme,
 } from '@mui/material';
 import { useForm, Controller } from 'react-hook-form';
 import { z } from 'zod';
@@ -65,7 +63,7 @@ const JobPostForm = () => {
        const formId=useId();
     return (
         <>
-            <Card sx={{ p: 3,mb:3 }}>
+            <Paper sx={{mb:3}}>
                 <Box sx={{display:"flex",justifyContent:"space-between",mb:2}}>
                     <Typography variant={"h6"}>Job Details</Typography>
                     <Box sx={{display:"flex",gap:1}}>
@@ -347,7 +345,7 @@ const JobPostForm = () => {
                         </Grid>
                     </Grid>
                 </form>
-            </Card>
+            </Paper>
             <Box width="100%" display={"flex"} justifyContent={"space-between"} >
                 <Box>
                     <TextButton>

@@ -1,10 +1,9 @@
 "use client";
 import React, { ReactNode, useState } from "react";
 import {
-    Box, FormControl, InputLabel,
+    Box, FormControl,
     MenuItem,
     Paper,
-    Select,
     Typography,
 } from "@mui/material";
 import {
@@ -12,18 +11,15 @@ import {
     Line,
     XAxis,
     YAxis,
-    CartesianGrid,
     Tooltip,
     Legend,
     ResponsiveContainer,
-    LegendProps, ReferenceLine,
+     ReferenceLine,
 } from "recharts";
-import Image from "next/image";
 import { Props } from "recharts/types/component/DefaultLegendContent";
 import { Assistant } from "next/font/google";
 import StyledSelect from "@/app/components/styled/StyledSelect/StyledSelect";
 
-// Локальное подключение шрифта
 const assistant = Assistant({
     subsets: ["latin"],
     weight: ["600"],
@@ -101,13 +97,7 @@ const HiringInsights = () => {
     };
 
     return (
-        <Paper
-            sx={{
-                p: 3,
-                border: "1px solid #EAECF0",
-                borderRadius: "8px",
-            }}
-        >
+        <Paper>
             <Box
                 sx={{
                     display: "flex",
@@ -116,12 +106,7 @@ const HiringInsights = () => {
                 }}
             >
                 <Typography
-                    sx={{
-                        fontSize: "20px",
-                        lineHeight: "100%",
-                        letterSpacing: "0%",
-                        fontWeight: 600,
-                    }}
+                    variant={"h6"}
                 >
                     Hiring Insights
                 </Typography>

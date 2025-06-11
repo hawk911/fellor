@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import StatsCardGrid from "@/app/components/StatsCardGrid/StatsCardGrid";
+import StatsCardGrid from "@/app/components/common/StatsCardGrid/StatsCardGrid";
 import { Box, Grid } from '@mui/material';
 import ManagePostings from "@/app/components/RecruiterComponents/ManagePostings/ManagePostings";
 import ApplicationSources from "@/app/components/RecruiterComponents/JobManagement/ApplicationSources/ApplicationSources";

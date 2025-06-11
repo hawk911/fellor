@@ -6,7 +6,7 @@ interface FormInputProps {
     type?: string;
     placeholder?: string;
     error?: string;
-    registerProps: any; // react-hook-form register()
+    registerProps: any;
 }
 
 const FormInput = ({ id, label, type = 'text', placeholder, error, registerProps }: FormInputProps) => {

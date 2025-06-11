@@ -25,14 +25,7 @@ const TodoList = () => {
                            elevation={0}
                            sx={{padding:"24px",border:"1px solid #EAECF0"}}>
             <Typography
-                sx={{
-                    fontSize: '20px',
-                    lineHeight: '100%',
-                    letterSpacing: '0%',
-                    fontWeight: 600,
-                    mb:2,
-                }}
-            >
+               variant={"h6"} >
                 To-Do List            </Typography>
             {items.map(el=>  <Paper
                 component={Link}
@@ -64,9 +57,8 @@ const TodoList = () => {
                     </Box>
                     <Box>
                         <Typography
-                            sx={{fontSize:16,
-                                fontWeight:400,
-                                lineHeight:"100%",letterSpacing:"0%"}} >{el.title}</Typography>
+                            variant={"body1"}
+                            sx={{lineHeight:"100%",letterSpacing:"0%"}} >{el.title}</Typography>
                         <Typography sx={{color:"#787878"}}>{el.count} pending approvals</Typography>
                     </Box>
                 </Box>
