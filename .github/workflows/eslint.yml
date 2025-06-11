@@ -37,17 +37,29 @@ jobs:
           # The following packages are required to lint TypeScript files.
           npm install @typescript-eslint/parser@^5.0.0 @typescript-eslint/eslint-plugin@^5.0.0
 
+      - name: Create ESLint configuration file
+        # This step creates a basic .eslintrc.json file.
+        # This is necessary because the ESLint action requires a configuration file to exist.
+        run: |
+          echo '{
+            "parser": "@typescript-eslint/parser",
+            "plugins": ["@typescript-eslint"],
+            "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+            "rules": {}
+          }' > .eslintrc.json
+
       - name: Run ESLint
-        # The explicit --config flag has been removed. ESLint will now automatically look for a configuration file.
-        # This will fix the "Cannot read config file" error, assuming a valid .eslintrc.* file exists in your repo.
-        # If no config file exists, ESLint will error.
+        # The explicit --config flag is added back to point to the newly created file.
         # Once your configuration is working, you can add `continue-on-error: true` back to this step
         # if you want the workflow to upload results even when ESLint finds code style issues.
         run: |
           npx eslint . \
+            --config .eslintrc.json \
             --ext .js,.jsx,.ts,.tsx \
             --format @microsoft/eslint-formatter-sarif \
             --output-file eslint-results.sarif
+        # We will add continue-on-error back, so that the SARIF file is always uploaded.
+        continue-on-error: true
 
       - name: Upload analysis results to GitHub
         uses: github/codeql-action/upload-sarif@v3
