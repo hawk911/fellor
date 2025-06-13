@@ -7,10 +7,9 @@ const Footer = () => {
 
     return (
         <Box
-            className="inter"
             component="footer"
             sx={{
-                borderTop: '1px solid #E5E7EB', // светло-серая граница
+                borderTop: '1px solid #E5E7EB',
                 backgroundColor: '#FCFCFD',
                 px: { xs: 2, sm: 4 },
                 py: { xs: 3, sm: 4 },
@@ -22,7 +21,6 @@ const Footer = () => {
                 textAlign: 'center',
             }}
         >
-            {/* Фраза */}
             <Typography
                 sx={{
                     fontSize: '13px',
@@ -33,8 +31,6 @@ const Footer = () => {
             >
                 Powered by Fellor — Recruiting with Bull’s Eye Precision © 2025
             </Typography>
-
-            {/* Ссылки */}
             <Box
                 sx={{
                     display: 'flex',

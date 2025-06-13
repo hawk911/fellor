@@ -1,5 +1,6 @@
- export
- const candidateSidebarItems = [
+//this array will be used to display side bar items for candidate!!
+//Этот массив будет использоваться для отображения пунктов боковой панели для кандидата.
+export const candidateSidebarItems = [
     {
         label: 'Dashboard',
         icon: '/icons/sideBar/home.png',
@@ -32,6 +33,7 @@
         ]
     }
 ];
+//this one for recruiter
 export const recruiterSideBarItems=[
     {
         label: 'Dashboard',

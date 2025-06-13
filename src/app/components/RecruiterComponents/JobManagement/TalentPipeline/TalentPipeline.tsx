@@ -12,14 +12,9 @@ const TalentPipeline = () => {
     ];
 
     return (
-        <Paper sx={{ p: 3, borderRadius: "12px" }}>
+        <Paper>
             <Typography
-                sx={{
-                    fontSize: "20px",
-                    lineHeight: "100%",
-                    fontWeight: 600,
-                    mb: 3,
-                }}
+               variant={"h6"}
             >
                 Talent Pipeline
             </Typography>

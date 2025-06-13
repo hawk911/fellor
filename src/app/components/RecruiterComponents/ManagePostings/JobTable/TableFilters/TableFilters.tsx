@@ -5,7 +5,6 @@ import SearchIcon from "@mui/icons-material/Search";
 import StyledSelect from "@/app/components/styled/StyledSelect/StyledSelect";
 
 export default function TableFilters() {
-    // состояния для контролируемых селектов
     const [date, setDate] = useState("");
     const [status, setStatus] = useState("");
     const [recruiter, setRecruiter] = useState("");

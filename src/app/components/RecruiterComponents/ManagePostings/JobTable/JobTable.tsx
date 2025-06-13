@@ -1,11 +1,5 @@
 "use client";
 import React, { useState } from "react";
-
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-
-// Импорт иконок (в зависимости от сборщика — можно импортировать так или через <img>)
-import ArrowLeftIcon from "../../public/icons/arrows/arrowLeft.svg";
-import ArrowRightIcon from "../../public/icons/arrows/arrowRight.svg";
 import Pagination from "@/app/components/RecruiterComponents/ManagePostings/JobTable/Pagination/Pagination";
 import TableComponent from "@/app/components/RecruiterComponents/ManagePostings/JobTable/TableComponent/TableComponent";
 import TableFilters from "@/app/components/RecruiterComponents/ManagePostings/JobTable/TableFilters/TableFilters";

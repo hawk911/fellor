@@ -1,8 +1,6 @@
-// app/theme/theme.ts
-import { extendTheme } from '@mui/material/styles'; // No longer experimental
-import { Inter, Open_Sans } from 'next/font/google';
+import { extendTheme } from '@mui/material/styles';
+import { Inter } from 'next/font/google';
 
-const openSans = Open_Sans({ subsets: ['latin'] });
 const inter = Inter({ subsets: ['latin'] });
 
 declare module '@mui/material/styles' {
@@ -37,6 +35,13 @@ const theme = extendTheme({
         h1: {
             fontWeight: 700,
         },
+        h6: {
+            fontSize: '20px',
+            lineHeight: '100%',
+            letterSpacing: '0',
+            fontWeight: 600,
+            marginBottom:"15px",
+        },
     },
     components: {
         MuiButton: {
@@ -48,14 +53,23 @@ const theme = extendTheme({
                     textTransform: "none",
                 },
                 containedPrimary: {
-                    color: "#fff", // белый цвет текста для кнопок с color="primary" и variant="contained"
+                    color: "#fff",
                 },
                 textPrimary: {
-                    color: "#fff", // белый текст для text кнопок с color="primary" (если нужно)
+                    color: "#fff",
                 },
             },
         },
-
+        MuiPaper: {
+            styleOverrides: {
+                root: {
+                    borderRadius:"12px",
+                    padding: '24px',
+                    border: '1px solid #E5E7EB',
+                    boxShadow: '0px 1px 2px 0px #0000000D',
+                },
+            },
+        },
         MuiOutlinedInput: {
             styleOverrides: {
                 root: {
@@ -83,7 +97,7 @@ const theme = extendTheme({
             },
             styleOverrides: {
                 root: {
-                    color: "#D4D7DD", // gray.300 default color
+                    color: "#D4D7DD",
                     "&.Mui-checked": {
                         color: "secondary.main",
                     },

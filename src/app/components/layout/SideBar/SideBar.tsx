@@ -4,9 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import mainLogo from "@/assets/mainLogoBlack.png";
 import { Box } from '@mui/material';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { usePathname } from 'next/navigation';
-import {candidateSidebarItems, recruiterSideBarItems} from "@/consts/sideBarElems";
+import {recruiterSideBarItems} from "@/consts/sideBarElems";
 
 const Sidebar = () => {
     const pathname = usePathname();
@@ -14,7 +13,6 @@ const Sidebar = () => {
 
     const handleLogout = () => {
         console.log("Logging out...");
-        // Здесь можно вызвать logout() или redirect
     };
 
     return (

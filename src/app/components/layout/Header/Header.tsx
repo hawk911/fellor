@@ -16,7 +16,6 @@ import { recruiterSideBarItems } from '@/consts/sideBarElems';
 const Header = () => {
     const theme = useTheme();
     const pathname = usePathname();
-    console.log('pathname:',pathname);
     const [quickAnchorEl, setQuickAnchorEl] = useState<null | HTMLElement>(null);
     const quickOpen = Boolean(quickAnchorEl);
     const handleQuickClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -25,8 +24,6 @@ const Header = () => {
     const handleQuickClose = () => {
         setQuickAnchorEl(null);
     };
-
-    // New state for notifications popover
     const [notifAnchorEl, setNotifAnchorEl] = useState<null | HTMLElement>(null);
     const notifOpen = Boolean(notifAnchorEl);
     const handleNotifClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -70,7 +67,6 @@ const Header = () => {
         },
     ];
 
-    // Sample notifications data
     const notifications = [
         {
             title: 'Complete Your My Values Match!',
@@ -90,8 +86,11 @@ const Header = () => {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
-                    borderBottom: `1px solid ${theme.palette.grey[200]}`,
                     padding: '16px 24px',
+                    boxShadow:0,
+                    borderRadius:0,
+                    border:0,
+                    borderBottom: `1px solid ${theme.palette.grey[200]}`,
                 }}
             >
                 {/* Left side */}
@@ -288,7 +287,8 @@ const Header = () => {
                                src={"/icons/notification.svg"}
                                alt={"Notification"}/>
                         <Box>
-                            <Typography sx={{fontWeight: 500,fontSize: 16,
+                            <Typography variant={"body1"}
+                                        sx={{fontWeight: 500,
                                 lineHeight: '24px'}}>
                                 {title}
                             </Typography>
